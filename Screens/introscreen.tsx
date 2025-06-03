@@ -15,7 +15,7 @@ import { LinearGradient } from "expo-linear-gradient";
 const { width, height } = Dimensions.get("window");
 
 type RootStackParamList = {
-  GetStarted: undefined;
+  Login: undefined;
 };
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -56,8 +56,8 @@ const IntroScreen = () => {
   };
 
   const handleSignIn = () => {
-    // navigation.navigate("Login");
-    console.log("Sign In pressed");
+    navigation.navigate("Login");
+    console.log("Log In pressed");
   };
 
   const renderItem = ({ item }: any) => (
@@ -90,12 +90,12 @@ const IntroScreen = () => {
           </LinearGradient>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleSignIn}>
-          <Text style={styles.signInText}>
-            Already have an account?{" "}
+        <Text style={styles.signInText}>
+          Already have an account?{" "}
+          <TouchableOpacity onPress={handleSignIn}>
             <Text style={styles.signInLink}>Log in</Text>
-          </Text>
-        </TouchableOpacity>
+          </TouchableOpacity>
+        </Text>
       </View>
     </ImageBackground>
   );

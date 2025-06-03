@@ -4,7 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SplashScreen from "./Screens/splashscreen";
 import IntroScreen from "./Screens/introscreen";
-import GetStartedScreen from "./Screens/getstarted"; // Optional final screen
+import LoginScreen from "./Screens/login";
+// import GetStartedScreen from "./Screens/getstarted"; // Optional final screen
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +34,7 @@ export default function App() {
       <StatusBar style="auto" />
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Intro" component={IntroScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
         {/* <Stack.Screen name="GetStarted" component={GetStartedScreen} /> */}
         {/* Add more screens here */}
       </Stack.Navigator>
